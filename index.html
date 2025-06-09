@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Visualizador de Mapas</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- 🔎 Barra de busca de endereço -->
+    <div id="search-container">
+        <input type="text" id="address-input" placeholder="Buscar endereço..." />
+        <button id="search-button">Buscar</button>
+        <input type="file" id="upload-geojson" accept=".geojson" title="Carregar GeoJSON" />
+        <button id="download-button">Baixar Dados</button>
+    </div>
+
+    <!-- 🗺️ Container do mapa -->
+    <div id="mapid"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
