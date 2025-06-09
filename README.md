@@ -91,6 +91,25 @@ Especialista em dados geoespaciais, Coordenador de Geotecnologias no IDEFLOR-Bio
 
 ---
 
+## Referências
+
+- **IBGE – Instituto Brasileiro de Geografia e Estatística.**  
+  *Base de Faces de Logradouros do Brasil.* Rio de Janeiro: IBGE, 2023.  
+  Disponível em: [https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/28971-base-de-faces-de-logradouros-do-brasil.html](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/28971-base-de-faces-de-logradouros-do-brasil.html).  
+  Acesso em: 09 jun. 2025.
+
+- **SNIRH – Sistema Nacional de Informações sobre Recursos Hídricos.**  
+  *Base cartográfica de drenagem da bacia hidrográfica do Pará.* Brasília: ANA, 2023.  
+  Disponível em: [https://metadados.snirh.gov.br/geonetwork/srv/api/records/c228f25a-cfb0-460f-a531-c63dd5f310c0](https://metadados.snirh.gov.br/geonetwork/srv/api/records/c228f25a-cfb0-460f-a531-c63dd5f310c0).  
+  Acesso em: 09 jun. 2025.
+
+- **CODEM – Companhia de Desenvolvimento e Administração da Área Metropolitana de Belém.**  
+  *Mapas dos bairros de Belém (PDF).* Belém: CODEM, 2022.  
+  Disponível em: [https://codem.belem.pa.gov.br/mapas/bairros-de-belem/](https://codem.belem.pa.gov.br/mapas/bairros-de-belem/).  
+  Acesso em: 09 jun. 2025.
+
+---
+
 ## 📝 Licença
 
 Este projeto está licenciado sob a licença MIT.
