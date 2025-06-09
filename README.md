@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://samuel-c-santos.github.io/app_mapas/" target="_blank">
+  <a href="https://samuel-c-santos.github.io/geovisor-belem//" target="_blank">
     <img src="https://img.shields.io/badge/demo-online-green?style=for-the-badge" alt="Ver demonstração">
   </a>
   <a href="https://samuel-c-santos.github.io/" target="_blank">
@@ -83,7 +83,7 @@ Ou acesse diretamente a versão hospedada:
   </tr>
 </table>
 
-Engenheiro Florestal, Coordenador de Geotecnologias no IDEFLOR-Bio, especialista em geoprocessamento, ciência de dados ambientais e automações em Python, R e Google Earth Engine.
+Especialista em dados geoespaciais, Coordenador de Geotecnologias no IDEFLOR-Bio, especialista em geoprocessamento, ciência de dados ambientais e automações em Python, R e Google Earth Engine.
 
 🌐 Portfólio: [samuel-c-santos.github.io](https://samuel-c-santos.github.io/)
 
