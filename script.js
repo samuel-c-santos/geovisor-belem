@@ -8,30 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let bairrosLayer, logradourosLayer, uploadLayer;
 
-    // ======= Bairros (ativado por padrão) =======
-    fetch('data/bairros.geojson')
-        .then(res => res.json())
-        .then(data => {
-            bairrosLayer = L.geoJson(data, {
-                style: {
-                    color: "#007bff",
-                    weight: 2,
-                    fillColor: "#007bff",
-                    fillOpacity: 0.2
-                },
-                onEachFeature: (feature, layer) => {
-                    if (feature.properties?.nome) {
-                        layer.bindPopup(`<b>Bairro:</b> ${feature.properties.nome}`);
-                    }
-                    layer.on({
-                        mouseover: e => e.target.setStyle({ weight: 3, fillOpacity: 0.5 }),
-                        mouseout: e => bairrosLayer.resetStyle(e.target),
-                        click: e => map.fitBounds(e.target.getBounds())
-                    });
-                }
-            }).addTo(map);
-        });
-
     // ======= Logradouros (inicialmente oculto) =======
     fetch('data/logradouros.geojson')
         .then(res => res.json())
@@ -72,13 +48,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     fillOpacity: 0.2
                 },
                 onEachFeature: (feature, layer) => {
-                    if (feature.properties?.nome) {
-                        layer.bindPopup(`<b>Bairro:</b> ${feature.properties.nome}`);
+                    let popup = "<b>Informações do Bairro</b><br>";
+                    for (const [key, value] of Object.entries(feature.properties)) {
+                        popup += `<b>${key}:</b> ${value}<br>`;
                     }
+                    layer.bindPopup(popup);
+
                     layer.on({
                         mouseover: e => e.target.setStyle({ weight: 3, fillOpacity: 0.5 }),
                         mouseout: e => bairrosLayer.resetStyle(e.target),
-                        click: e => map.fitBounds(e.target.getBounds())
+                        click: function (e) {
+                            map.fitBounds(e.target.getBounds());
+                            this.openPopup();
+                        }
+                    });
+                    layer.on({
+                        mouseover: e => e.target.setStyle({ weight: 3, fillOpacity: 0.5 }),
+                        mouseout: e => bairrosLayer.resetStyle(e.target),
+                        click: function (e) {
+                            map.fitBounds(e.target.getBounds());
+                            this.openPopup();
+                        }
                     });
                 }
             }).addTo(map);
@@ -97,14 +87,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     opacity: 0.7
                 },
                 onEachFeature: (feature, layer) => {
-                    let popup = '';
-                    if (feature.properties?.nome) popup += `<b>Logradouro:</b> ${feature.properties.nome}<br>`;
-                    if (feature.properties?.tipo) popup += `<b>Tipo:</b> ${feature.properties.tipo}<br>`;
-                    if (popup) layer.bindPopup(popup);
+                    let popup = "<b>Informações do Logradouro</b><br>";
+                    for (const [key, value] of Object.entries(feature.properties)) {
+                        popup += `<b>${key}:</b> ${value}<br>`;
+                    }
+                    layer.bindPopup(popup);
 
                     layer.on({
                         mouseover: e => e.target.setStyle({ weight: 3, color: '#3388ff' }),
-                        mouseout: e => logradourosLayer.resetStyle(e.target)
+                        mouseout: e => logradourosLayer.resetStyle(e.target),
+                        click: function () {
+                            this.openPopup();
+                        }
                     });
                 }
             }); // não adiciona ainda

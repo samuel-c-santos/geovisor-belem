@@ -18,7 +18,7 @@ body {
 #search-container {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 60px; /* afastado do controle de zoom */
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.95);
     padding: 15px;
