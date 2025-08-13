@@ -65,7 +65,7 @@ Você pode usar o [Live Server](https://marketplace.visualstudio.com/items?itemN
 
 Ou acesse diretamente a versão hospedada:
 
-➡️ <a href="https://samuel-c-santos.github.io/app_mapas/" target="_blank"><strong>samuel-c-santos.github.io/app\_mapas</strong></a>
+➡️ <a href="https://samuel-c-santos.github.io/geovisor-belem/" target="_blank"><strong>samuel-c-santos.github.io/app\_mapas</strong></a>
 
 ---
 
